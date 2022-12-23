@@ -22,11 +22,11 @@
     "update-dependencies": "npx npm-check-updates -u"
   },
   "dependencies": {
-    "utils-version": "workspace:*"
+    "utils-version": "*"
   },
   "devDependencies": {
-    "config-storybook": "workspace:*",
-    "config-tsconfig": "workspace:*",
-    "utils-test": "workspace:*"
+    "config-storybook": "*",
+    "config-tsconfig": "*",
+    "utils-test": "*"
   }
 }

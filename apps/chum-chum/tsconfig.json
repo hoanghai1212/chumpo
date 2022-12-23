@@ -1,0 +1,13 @@
+{
+  "extends": "config-tsconfig/tsconfig.nextjs.json",
+  "compilerOptions": {
+    "target": "es2017",
+    "baseUrl": ".",
+    "paths": {
+      ".": ["."]
+    }
+  },
+  // Files and folders starting with a . are ignored by the glob patterns
+  "include": [".", ".eslintrc.js", ".storybook/**/*"],
+  "exclude": ["node_modules", ".next", ".turbo", "coverage", "dist", "compiled", "build-storybook-static"]
+}

@@ -71,7 +71,7 @@ module.exports = {
       },
     },
     {
-      files: ['src/**/*.stories.*', 'src/pages/**/*'],
+      files: ['next.config.mjs', '**/*.stories.*', 'pages/**/*'],
       rules: {
         'import/no-default-export': 'off',
       },

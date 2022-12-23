@@ -1,20 +1,5 @@
 {
   "name": "config-storybook",
   "version": "0.0.0",
-  "main": "index.ts",
-  "scripts": {
-    "update-dependencies": "npx npm-check-updates -u"
-  },
-  "dependencies": {},
-  "devDependencies": {
-    "@storybook/addon-actions": "6.5.15",
-    "@storybook/addon-essentials": "6.5.15",
-    "@storybook/addon-interactions": "6.5.15",
-    "@storybook/addon-links": "6.5.15",
-    "@storybook/addon-postcss": "2.0.0",
-    "@storybook/builder-webpack5": "6.5.15",
-    "@storybook/manager-webpack5": "6.5.15",
-    "@storybook/react": "6.5.15",
-    "@storybook/theming": "6.5.15"
-  }
+  "main": "index.ts"
 }

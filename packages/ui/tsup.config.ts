@@ -1,7 +1,7 @@
 import { defineConfig } from 'tsup';
 
 const tsupConfig = defineConfig({
-  entry: ['src/index.ts'],
+  entry: ['src/index.tsx'],
   format: ['esm', 'cjs'],
   dts: true,
   external: ['react', 'react-dom'],

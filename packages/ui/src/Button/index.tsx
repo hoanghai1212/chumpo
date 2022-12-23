@@ -1,10 +1,7 @@
-import { CSSProperties, ReactNode } from 'react';
-
-import { ButtonStyled } from './styled';
+import { ReactNode } from 'react';
 
 export type ButtonProps = {
   children: ReactNode;
-
   onClick: () => void;
 };
 

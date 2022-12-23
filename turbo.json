@@ -2,13 +2,52 @@
   "$schema": "https://turbo.build/schema.json",
   "pipeline": {
     "build": {
-      "dependsOn": ["^build"],
-      "outputs": ["dist/**", ".next/**"]
+      "dependsOn": [
+        "^build"
+      ],
+      "outputs": [
+        "dist/**",
+        ".next/**"
+      ]
+    },
+    "storybook-build": {
+      "dependsOn": [
+        "build"
+      ],
+      "outputs": [
+        "build-storybook-static/**"
+      ]
     },
     "lint": {
-      "outputs": []
+      "dependsOn": [
+        "build"
+      ]
+    },
+    "tsc": {
+      "dependsOn": [
+        "build"
+      ]
+    },
+    "test": {
+      "dependsOn": [
+        "build"
+      ]
+    },
+    "storybook": {
+      "dependsOn": [
+        "build"
+      ]
     },
     "dev": {
+      "cache": false
+    },
+    "update-dependencies": {
+      "cache": false
+    },
+    "db:generate": {
+      "cache": false
+    },
+    "db:push": {
       "cache": false
     }
   }

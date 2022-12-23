@@ -1,5 +1,5 @@
 {
-  "name": "ui",
+  "name": "utils-version",
   "version": "0.0.0",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -10,23 +10,15 @@
   ],
   "scripts": {
     "build": "tsup",
-    "dev": "tsup --watch",
     "lint": "eslint --max-warnings 0 .",
     "lint-fix": "eslint --fix .",
     "tsc": "tsc -p tsconfig.json",
     "test": "jest --verbose",
     "test-watch": "jest --verbose --watch",
     "test-coverage": "jest --coverage --verbose",
-    "storybook": "start-storybook -p 6200 --quiet",
-    "storybook-build": "build-storybook -o build-storybook-static",
     "update-dependencies": "npx npm-check-updates -u"
   },
-  "dependencies": {
-    "utils-version": "workspace:*"
-  },
   "devDependencies": {
-    "config-storybook": "workspace:*",
-    "config-tsconfig": "workspace:*",
-    "utils-test": "workspace:*"
+    "config-tsconfig": "workspace:*"
   }
 }

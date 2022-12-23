@@ -6,7 +6,7 @@
       ".": ["."]
     }
   },
-  "include": [".", ".eslintrc.js", ".storybook/**/*"],
+  "include": [".", ".eslintrc.js"],
   "exclude": [
     "node_modules",
     ".next",

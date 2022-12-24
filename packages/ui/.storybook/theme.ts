@@ -3,6 +3,6 @@ import { getVersionInfo } from 'utils-version';
 
 export const theme = create({
   base: 'light',
-  brandTitle: `Turborepo Boilerplate - UI ${getVersionInfo()}`,
-  brandUrl: 'https://github.com/mkosir/turborepo-boilerplate',
+  brandTitle: `Chumpo - UI ${getVersionInfo()}`,
+  brandUrl: 'https://github.com/hoanghai1212/chumpo',
 });

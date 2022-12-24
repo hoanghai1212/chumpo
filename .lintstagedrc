@@ -1,4 +1,3 @@
 {
-  "*": ["pretty-quick --staged"],
-  "!(apps/boilerplate-app/src/common/api/petstore/api-types/**/*)*.{js,jsx,ts,tsx}": ["eslint --max-warnings 0"]
+  "*": ["pretty-quick --staged"]
 }

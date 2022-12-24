@@ -19,6 +19,7 @@
     "update-dependencies": "npx npm-check-updates -u"
   },
   "devDependencies": {
+    "tsup": "6.5.0",
     "config-tsconfig": "*"
   }
 }

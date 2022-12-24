@@ -54,7 +54,6 @@ module.exports = {
       'error',
       {
         groups: ['builtin', 'external', 'internal', 'parent', 'sibling'],
-        'newlines-between': 'always',
         alphabetize: {
           order: 'asc',
           caseInsensitive: true,
@@ -71,7 +70,7 @@ module.exports = {
       },
     },
     {
-      files: ['next.config.mjs', '**/*.stories.*', 'pages/**/*'],
+      files: ['*.config.*', '**/*.stories.*', 'pages/**/*'],
       rules: {
         'import/no-default-export': 'off',
       },

@@ -1,6 +1,4 @@
-/* eslint-disable @typescript-eslint/no-unsafe-call */
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
-import { PrismaClient } from 'database';
+import { PrismaClient } from '@prisma/client';
 
 import { env } from '../../env/server.mjs';
 

@@ -1,5 +1,5 @@
 import { action } from '@storybook/addon-actions';
-import { Story, Meta } from '@storybook/react';
+import { Meta, Story } from '@storybook/react';
 
 import { Button, ButtonProps } from '.';
 
@@ -10,9 +10,6 @@ export default {
 
 const base: ButtonProps = {
   children: 'Click Me',
-  isDisabled: false,
-  size: 'medium',
-  bgColor: undefined,
   onClick: action('onClick'),
 };
 
@@ -27,17 +24,3 @@ const LongTextArgs: ButtonProps = {
   children: 'Really Looooong Text',
 };
 LongText.args = LongTextArgs;
-
-export const Disabled = Template.bind({});
-const DisabledArgs: ButtonProps = {
-  ...base,
-  isDisabled: true,
-};
-Disabled.args = DisabledArgs;
-
-export const RedBgColor = Template.bind({});
-const RedBGColorArgs: ButtonProps = {
-  ...base,
-  bgColor: 'red',
-};
-RedBgColor.args = RedBGColorArgs;

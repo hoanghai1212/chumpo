@@ -1,36 +1,36 @@
-# Turborepo starter
-
-This is an official pnpm starter turborepo.
-
 ## What's inside?
 
-This turborepo uses [pnpm](https://pnpm.io) as a package manager. It includes the following packages/apps:
+This turborepo uses [npm](https://www.npmjs.com) as a package manager. It includes the following packages/apps:
 
 ### Apps and Packages
 
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `ui`: a stub React component library shared by both `web` and `docs` applications
-- `eslint-config-custom`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `tsconfig`: `tsconfig.json`s used throughout the monorepo
+- `chum-chum`: a [Next.js](https://nextjs.org/) app
+- `ui`: a stub React component library shared by applications
+- `config-eslint`: `eslint` configurations
+- `config-jest`: `jest` configurations
+- `config-storybook`: `storybook` configurations
+- `config-tsconfig`: `tsconfig.json`s used throughout the monorepo
+- `database`: a `Prisma` client and schema
+- `utils-test`: a stub test utility library
+- `utils-version`: a stub version utility library
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+Each package/app is 99.99% [TypeScript](https://www.typescriptlang.org/).
 
 ### Utilities
-
-This turborepo has some additional tools already setup for you:
 
 - [TypeScript](https://www.typescriptlang.org/) for static type checking
 - [ESLint](https://eslint.org/) for code linting
 - [Prettier](https://prettier.io) for code formatting
+- [Husky](https://typicode.github.io/husky/#/) for Git hooks
+  - fix if husky not working: `chmod ug+x .husky/*` `chmod ug+x .git/hooks/*`
 
 ### Build
 
 To build all apps and packages, run the following command:
 
 ```
-cd my-turborepo
-pnpm run build
+cd chumpo
+npm run build
 ```
 
 ### Develop
@@ -38,8 +38,8 @@ pnpm run build
 To develop all apps and packages, run the following command:
 
 ```
-cd my-turborepo
-pnpm run dev
+cd chumpo
+npm run dev
 ```
 
 ### Remote Caching
@@ -49,8 +49,8 @@ Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo
 By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
 
 ```
-cd my-turborepo
-pnpm dlx turbo login
+cd chumpo
+npm dlx turbo login
 ```
 
 This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
@@ -58,7 +58,7 @@ This will authenticate the Turborepo CLI with your [Vercel account](https://verc
 Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your turborepo:
 
 ```
-pnpm dlx turbo link
+npm dlx turbo link
 ```
 
 ## Useful Links

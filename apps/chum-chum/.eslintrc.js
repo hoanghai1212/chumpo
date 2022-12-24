@@ -8,5 +8,5 @@ module.exports = {
     project: ['./tsconfig.json'],
   },
 
-  extends: ['eslint-config-base'],
+  extends: ['next', 'eslint-config-base'],
 };

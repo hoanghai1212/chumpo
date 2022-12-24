@@ -17,6 +17,8 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "tsup": "6.5.0",
+    "@testing-library/react": "13.4.0",
     "config-tsconfig": "*"
   }
 }

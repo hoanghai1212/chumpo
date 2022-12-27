@@ -1,7 +1,4 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-# run lint-staged-husky script only if SKIP_LINT_STAGED_HUSKY is not set
-if [ -z "$SKIP_LINT_STAGED_HUSKY" ]; then
-  npm run lint-staged-husky
-fi
+npm run lint-staged-husky

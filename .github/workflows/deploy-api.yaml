@@ -3,7 +3,7 @@ on:
   push:
     branches:
       - main
-  path:
+  paths:
     - 'apps/chum-api/**'
 
   jobs:
@@ -14,7 +14,7 @@ on:
         - uses: akhileshns/heroku-deploy@v3.12.12
           with:
             branch: 'main'
-            path: 'apps/chum-api'
+            paths: 'apps/chum-api'
             heroku_api_key: ${{secrets.HEROKU_API_KEY}}
             heroku_app_name: 'chum-api'
             heroku_email: 'hoanghai129612@gmail.com'

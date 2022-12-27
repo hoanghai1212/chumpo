@@ -10,7 +10,9 @@
   ],
   "scripts": {
     "build": "tsup && npx tailwindcss -i ./globals.css -o ./dist/globals.css",
-    "dev": "tsup --watch",
+    "dev": "concurrently \"npm:dev:*\"",
+    "dev:css": "npx tailwindcss -i ./globals.css -o ./dist/globals.css --watch",
+    "dev:ts": "tsup --watch",
     "lint": "eslint --max-warnings 0 .",
     "lint-fix": "eslint --fix .",
     "tsc": "tsc -p tsconfig.json",

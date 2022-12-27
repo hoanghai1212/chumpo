@@ -70,22 +70,140 @@ enum PetSize {
 }
 
 model Pet {
-  id        String    @id @default(uuid())
-  name      String
-  kind      PetKind
-  gender    Gender
-  size      PetSize
-  birthday  DateTime
-  gotchaDay DateTime?
-  avatar    String?
-  createdAt DateTime  @default(now())
-  owner     User      @relation(fields: [ownerId], references: [id], onDelete: Cascade)
-  ownerId   String
-  breeds    Breed[]
+  id                  String               @id @default(uuid())
+  name                String
+  kind                PetKind
+  gender              Gender
+  size                PetSize
+  birthday            DateTime
+  gotchaDay           DateTime?
+  avatar              String?
+  createdAt           DateTime             @default(now())
+  owner               User                 @relation(fields: [ownerId], references: [id], onDelete: Cascade)
+  ownerId             String
+  breeds              Breed[]
+  petFood             PetFood[]
+  petFavoriteTreats   PetTreat[]
+  petFavoriteFlavor   PetFlavor[]
+  petSensitivies      PetSensitivies[]
+  needGrainFree       Boolean?
+  needWeightControl   Boolean?
+  PetWellnessConcerns PetWellnessConcern[]
+  PetVaccineHistory   PetVaccineHistory[]
 }
 
 model Breed {
   id   String @id @default(uuid())
   name String
   Pets Pet[]
+}
+
+enum FoodType {
+  WET
+  DRY
+  OTHER
+}
+
+model PetFood {
+  id            String       @id @default(uuid())
+  createdAt     DateTime     @default(now())
+  pet           Pet          @relation(fields: [petId], references: [id], onDelete: Cascade)
+  petId         String
+  foodProduct   FoodProduct  @relation(fields: [foodProductId], references: [id], onDelete: Cascade)
+  foodProductId String
+  foodType      FoodType
+  mealDetails   MealDetail[]
+  note          String?
+}
+
+model MealTime {
+  id          String       @id @default(uuid())
+  label       String
+  startTime   DateTime
+  endTime     DateTime
+  description String?
+  mealDetails MealDetail[]
+}
+
+model MealServingSize {
+  id          String       @id @default(uuid())
+  label       String
+  description String?
+  mealDetails MealDetail[]
+}
+
+model MealDetail {
+  id               String            @id @default(uuid())
+  createdAt        DateTime          @default(now())
+  petFood          PetFood           @relation(fields: [petFoodId], references: [id], onDelete: Cascade)
+  petFoodId        String
+  mealTimes        MealTime[]
+  quantity         Int
+  mealServingSizes MealServingSize[]
+}
+
+model FoodBrand {
+  id          String        @id @default(uuid())
+  name        String
+  foodProduct FoodProduct[]
+}
+
+model FoodProduct {
+  id          String     @id @default(uuid())
+  name        String
+  foodBrand   FoodBrand? @relation(fields: [foodBrandId], references: [id])
+  foodBrandId String?
+  petFood     PetFood[]
+}
+
+model PetTreat {
+  id          String  @id @default(uuid())
+  img         String
+  name        String
+  description String?
+  Pet         Pet[]
+}
+
+model PetFlavor {
+  id          String  @id @default(uuid())
+  img         String
+  name        String
+  description String?
+  Pet         Pet[]
+}
+
+model PetSensitivies {
+  id          String  @id @default(uuid())
+  img         String
+  name        String
+  description String?
+  Pet         Pet[]
+}
+
+model PetWellnessConcern {
+  id          String  @id @default(uuid())
+  name        String
+  description String?
+  Pet         Pet[]
+}
+
+model Vaccine {
+  id                String              @id @default(uuid())
+  name              String
+  petVaccineHistory PetVaccineHistory[]
+}
+
+model PetVaccineHistory {
+  id                      String   @id @default(uuid())
+  createdAt               DateTime @default(now())
+  pet                     Pet      @relation(fields: [petId], references: [id], onDelete: Cascade)
+  petId                   String
+  vaccine                 Vaccine? @relation(fields: [vaccineId], references: [id], onDelete: Cascade)
+  vaccineId               String?
+  name                    String?
+  lastVaccinationDate     DateTime
+  nextVaccinationDate     DateTime
+  previousVaccinationDate DateTime
+  note                    String?
+  photo                   String[]
 }

@@ -3,8 +3,8 @@ on:
   push:
     branches:
       - main
-  paths:
-    - 'apps/chum-api/**'
+    paths:
+      - 'apps/chum-api/**'
 
   jobs:
     build:

@@ -1,7 +1,6 @@
+import { jestConfigJsdom } from 'config-jest';
 import { Config } from 'jest';
 import nextJest from 'next/jest';
-
-import { jestConfigJsdom } from '../../packages/config-jest';
 
 const createJestConfig = nextJest({
   dir: './',

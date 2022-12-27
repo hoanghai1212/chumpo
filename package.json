@@ -22,7 +22,8 @@
     "clean": "npm exec --workspaces -- shx rm -rf node_modules .next .turbo coverage dist compiled build-storybook-static && shx rm -rf node_modules",
     "remove-turbo-cache": "shx rm -rf ./node_modules/.cache/turbo",
     "update-dependencies": "turbo update-dependencies && npx npm-check-updates -u",
-    "db:generate": "turbo db:generate"
+    "db:generate": "turbo db:generate",
+    "compodoc": "turbo compodoc"
   },
   "dependencies": {},
   "devDependencies": {

@@ -33,6 +33,9 @@
     },
     "update-dependencies": {
       "cache": false
+    },
+    "compodoc": {
+      "cache": false
     }
   }
 }

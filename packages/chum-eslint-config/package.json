@@ -1,6 +1,8 @@
 {
-  "name": "eslint-config-base",
-  "version": "0.0.0",
+  "name": "@chum/eslint-config",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
   "main": "index.js",
   "scripts": {
     "update-dependencies": "npx npm-check-updates -u"
@@ -22,5 +24,8 @@
     "eslint-plugin-react-hooks": "4.6.0",
     "eslint-plugin-storybook": "0.6.8",
     "eslint-plugin-testing-library": "5.9.1"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

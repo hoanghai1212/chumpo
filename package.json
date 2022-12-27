@@ -24,13 +24,19 @@
     "remove-turbo-cache": "shx rm -rf ./node_modules/.cache/turbo",
     "update-dependencies": "turbo update-dependencies && npx npm-check-updates -u",
     "db:generate": "turbo db:generate",
-    "compodoc": "turbo compodoc"
+    "compodoc": "turbo compodoc",
+    "heroku-postbuild": "turbo run build:api",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "changeset publish"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@changesets/cli": "^2.26.0"
+  },
   "devDependencies": {
-    "@types/node": "18.11.18",
     "@commitlint/cli": "17.3.0",
     "@commitlint/config-conventional": "17.3.0",
+    "@types/node": "18.11.18",
     "commitizen": "4.2.6",
     "husky": "8.0.2",
     "lint-staged": "13.1.0",

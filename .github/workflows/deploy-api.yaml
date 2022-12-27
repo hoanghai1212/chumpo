@@ -1,4 +1,4 @@
-name: Deploy
+name: Deploy API to Heroku
 on:
   push:
     branches:
@@ -11,14 +11,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+
       - name: Use Node.js 18.x
         uses: actions/setup-node@v3
         with:
           node-version: 18.x
-      - env:
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build Api
+        run: npm run build:api --if-present
+        env:
           DISABLE_ERD: ${{secrets.DISABLE_ERD}}
-      - run: npm ci
-      - run: npm run build:api --if-present
+
       - uses: akhileshns/heroku-deploy@v3.12.12
         with:
           branch: 'main'

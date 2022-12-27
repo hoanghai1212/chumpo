@@ -5,6 +5,10 @@
       "dependsOn": ["db:generate", "^build"],
       "outputs": ["dist/**", ".next/**"]
     },
+    "build:api": {
+      "dependsOn": ["db:generate", "^build:api"],
+      "outputs": ["dist/**"]
+    },
     "storybook-build": {
       "dependsOn": ["build"],
       "outputs": ["build-storybook-static/**"]

@@ -6,7 +6,7 @@
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
-    "build": "nest build",
+    "build:api": "nest build",
     "tsc": "tsc -p tsconfig.json",
     "format-fix": "prettier --config ../../.prettierrc --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",

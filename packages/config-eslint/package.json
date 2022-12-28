@@ -1,11 +1,21 @@
 {
-  "name": "@chum/eslint-config",
-  "version": "1.0.0",
-  "private": true,
+  "name": "@hoanghai1212/config-eslint",
+  "version": "1.0.1",
+  "description": "A npm package to share eslint config in chumpo",
   "license": "MIT",
   "main": "index.js",
   "scripts": {
     "update-dependencies": "npx npm-check-updates -u"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hoanghai1212/chumpo.git",
+    "directory": "packages/chum-eslint-config"
+  },
+  "author": "hoanghai1212",
+  "homepage": "https://github.com/hoanghai1212/chumpo",
+  "bugs": {
+    "url": "https://github.com/hoanghai1212/chumpo/issues"
   },
   "devDependencies": {
     "@tanstack/eslint-plugin-query": "4.20.7",
@@ -26,6 +36,6 @@
     "eslint-plugin-testing-library": "5.9.1"
   },
   "publishConfig": {
-    "access": "public"
+    "registry": "https://npm.pkg.github.com/"
   }
 }

@@ -1,5 +1,5 @@
 {
-  "name": "config-jest",
+  "name": "@chum-config/jest",
   "version": "0.0.0",
   "main": "index.ts",
   "scripts": {

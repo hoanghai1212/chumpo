@@ -7,5 +7,15 @@
   "access": "public",
   "baseBranch": "main",
   "updateInternalDependencies": "patch",
-  "ignore": []
+  "ignore": [
+    "chum-api",
+    "chum-chum",
+    "@chum-config/jest",
+    "@chum-config/storybook",
+    "@chum-config/tsconfig",
+    "@chum-pkg/database",
+    "@chum-utils/dto",
+    "@chum-utils/test",
+    "@chum-utils/version"
+  ]
 }
